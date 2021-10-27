@@ -2,6 +2,7 @@ package com.retos.mireto4.Modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -24,6 +25,8 @@ public class Patineta implements Serializable
     private String brand;
     private Integer year;
     private String description;
+    ///Reto 5
+    private Date startDate;
 
     @ManyToOne
     @JoinColumn(name = "skateId")
@@ -102,5 +105,14 @@ public class Patineta implements Serializable
     public void setReservations(List<Reservaciones> reservations) {
         this.reservations = reservations;
     }
+
+    public Date getStartDate() {
+        return this.startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+    
 
 }
