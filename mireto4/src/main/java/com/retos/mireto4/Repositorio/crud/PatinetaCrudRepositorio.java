@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Date;
 
 import com.retos.mireto4.Modelo.Patineta;
-import com.retos.mireto4.Repositorio.ClienteRepositorio;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -18,5 +17,5 @@ public interface PatinetaCrudRepositorio extends CrudRepository<Patineta,Integer
     public List<Patineta> findAllByStartDateAfterAndStartDateBefore(Date dateOne,Date dateTwo);
 
     public List<Patineta> findAllByDescription(String description );
-    
+
 }
